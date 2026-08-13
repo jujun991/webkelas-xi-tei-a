@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daftar Hadir - XI TEI A</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>DAFTAR HADIR</h1>
+        <p>XI TEI A</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="absensi.html">Daftar Hadir</a>
+        <a href="projek.html">Projek</a>
+        <a href="broadcast.html">Broadcast</a>
+        <a href="galeri.html">Galeri</a>
+    </nav>
+
+    <main>
+
+        <section>
+            <h2>Data Siswa</h2>
+
+            <div id="daftarSiswa">
+                <p>Memuat data siswa...</p>
+            </div>
+
+            <div id="formFoto">
+    <h3>Tambah Foto Siswa</h3>
+
+    <select id="pilihSiswa">
+        <option value="">Pilih siswa</option>
+    </select>
+
+    <input
+        type="file"
+        id="fotoInput"
+        accept="image/*"
+    >
+
+    <button id="uploadFoto">
+        Simpan Foto
+    </button>
+</div>
+
+
+
+            <button id="simpanAbsensi">Simpan Absensi</button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 XI TEI A</p>
+    </footer>
+
+    <script type="module" src="js/absensi.js"></script>
+
+</body>
+
+</html>
+

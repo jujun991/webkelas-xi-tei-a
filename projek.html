@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projek - XI TEI A</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>PROJEK KELAS</h1>
+        <p>XI TEI A</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="absensi.html">Daftar Hadir</a>
+        <a href="projek.html">Projek</a>
+        <a href="broadcast.html">Broadcast</a>
+        <a href="galeri.html">Galeri</a>
+    </nav>
+
+    <main>
+
+        <section>
+
+            <h2>Tambah Projek</h2>
+
+            <input
+                type="text"
+                id="namaProjek"
+                placeholder="Nama projek"
+            >
+
+            <textarea
+                id="deskripsiProjek"
+                placeholder="Deskripsi projek"
+            ></textarea>
+
+            <input
+                type="text"
+                id="anggotaProjek"
+                placeholder="Anggota projek"
+            >
+
+            <button id="tambahProjek">
+                Tambah Projek
+            </button>
+
+        </section>
+
+
+        <section>
+
+            <h2>Daftar Projek</h2>
+
+            <div id="daftarProjek">
+                <p>Memuat projek...</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 XI TEI A</p>
+    </footer>
+
+
+    <script
+        type="module"
+        src="js/projek.js">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin - XI TEI A</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>PANEL ADMIN</h1>
+
+        <p>XI TEI A</p>
+
+    </header>
+
+
+    <main>
+
+        <section>
+
+            <h2>Kelola Web Kelas</h2>
+
+            <p>
+                Selamat datang di panel admin.
+            </p>
+
+            <div>
+
+                <a href="projek.html">
+                    <button>
+                        Kelola Projek
+                    </button>
+                </a>
+
+                <a href="broadcast.html">
+                    <button>
+                        Kelola Broadcast
+                    </button>
+                </a>
+
+                <a href="galeri.html">
+                    <button>
+                        Kelola Galeri
+                    </button>
+                </a>
+
+                <a href="absensi.html">
+                    <button>
+                        Kelola Absensi
+                    </button>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <button id="logoutButton">
+                Logout
+            </button>
+
+        </section>
+
+        <section>
+
+    <h2>Wali Kelas</h2>
+
+    <input
+        type="text"
+        id="namaWali"
+        placeholder="Nama wali kelas"
+    >
+
+    <textarea
+        id="penjelasanWali"
+        placeholder="Penjelasan wali kelas"
+    ></textarea>
+
+    <input
+        type="file"
+        id="fotoWali"
+        accept="image/*"
+    >
+
+    <button id="simpanWali">
+        Simpan Wali Kelas
+    </button>
+
+</section>
+
+    <section>
+
+    <h2>Jadwal Pelajaran</h2>
+
+    <select id="hariJadwal">
+        <option value="">Pilih hari</option>
+        <option value="Senin">Senin</option>
+        <option value="Selasa">Selasa</option>
+        <option value="Rabu">Rabu</option>
+        <option value="Kamis">Kamis</option>
+        <option value="Jumat">Jumat</option>
+    </select>
+
+    <input
+        type="time"
+        id="jamJadwal"
+    >
+
+    <input
+        type="text"
+        id="pelajaranJadwal"
+        placeholder="Nama pelajaran"
+    >
+
+    <input
+        type="text"
+        id="guruJadwal"
+        placeholder="Nama guru"
+    >
+
+    <button id="tambahJadwal">
+        Tambah Jadwal
+    </button>
+
+</section>
+
+
+<section>
+
+    <h2>Daftar Jadwal</h2>
+
+    <div id="daftarJadwal"></div>
+
+</section>
+
+    </main>
+
+
+    <script
+    type="module"
+    src="js/firebase.js">
+</script>
+
+<script
+    type="module"
+    src="js/wali.js">
+</script>
+
+<script
+    type="module"
+    src="js/broadcast.js">
+</script>
+
+<script
+    type="module"
+    src="js/jadwal.js">
+</script>
+
+<script
+    type="module"
+    src="js/jadwalHome.js">
+</script>
+
+
+</body>
+
+</html>

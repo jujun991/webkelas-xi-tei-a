@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Broadcast - XI TEI A</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>BROADCAST KELAS</h1>
+        <p>XI TEI A</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="absensi.html">Daftar Hadir</a>
+        <a href="projek.html">Projek</a>
+        <a href="broadcast.html">Broadcast</a>
+        <a href="galeri.html">Galeri</a>
+    </nav>
+
+    <main>
+
+        <section>
+
+            <h2>Buat Broadcast</h2>
+
+            <input
+                type="text"
+                id="judulBroadcast"
+                placeholder="Judul pengumuman"
+            >
+
+            <textarea
+                id="isiBroadcast"
+                placeholder="Isi pengumuman"
+            ></textarea>
+
+            <input
+                type="text"
+                id="pengirimBroadcast"
+                placeholder="Nama pengirim"
+            >
+
+            <button id="tambahBroadcast">
+                Kirim Broadcast
+            </button>
+
+        </section>
+
+
+        <section>
+
+            <h2>Pengumuman</h2>
+
+            <div id="daftarBroadcast">
+                <p>Memuat broadcast...</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 XI TEI A</p>
+    </footer>
+
+
+    <script
+        type="module"
+        src="js/broadcast.js">
+    </script>
+
+</body>
+
+</html>

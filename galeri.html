@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galeri - XI TEI A</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>GALERI KELAS</h1>
+        <p>XI TEI A</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="absensi.html">Daftar Hadir</a>
+        <a href="projek.html">Projek</a>
+        <a href="broadcast.html">Broadcast</a>
+        <a href="galeri.html">Galeri</a>
+    </nav>
+
+    <main>
+
+        <section>
+
+            <h2>Tambah Foto</h2>
+
+            <input
+                type="text"
+                id="judulFoto"
+                placeholder="Judul / keterangan foto"
+            >
+
+            <input
+                type="text"
+                id="pengirimFoto"
+                placeholder="Nama pengirim"
+            >
+
+            <input
+                type="file"
+                id="fotoGaleri"
+                accept="image/*"
+            >
+
+            <button id="tambahFoto">
+                Upload Foto
+            </button>
+
+        </section>
+
+
+        <section>
+
+            <h2>Galeri Kelas</h2>
+
+            <div id="daftarGaleri">
+                <p>Memuat galeri...</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 XI TEI A</p>
+    </footer>
+
+
+    <script
+        type="module"
+        src="js/galeri.js">
+    </script>
+
+</body>
+
+</html>
