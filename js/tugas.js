@@ -9,6 +9,8 @@ import { db } from "./firebase.js";
 const daftarTugas =
     document.getElementById("daftarTugas");
 
+console.log("JUMLAH TUGAS:", snapshot.size);
+
 
 async function tampilkanTugas() {
 
