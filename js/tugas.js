@@ -1,3 +1,4 @@
+
 import {
     collection,
     getDocs
@@ -6,31 +7,46 @@ import {
 import { db } from "./firebase.js";
 
 
+console.log("TUGAS JS BERHASIL DIMUAT");
+
+
 const daftarTugas =
     document.getElementById("daftarTugas");
-
-console.log("JUMLAH TUGAS:", snapshot.size);
 
 
 async function tampilkanTugas() {
 
+    console.log("MENGAMBIL DATA TUGAS...");
+
+
     try {
 
+        const referensi =
+            collection(db, "tugas");
+
+
         const snapshot =
-            await getDocs(
-                collection(db, "tugas")
-            );
+            await getDocs(referensi);
+
+
+        console.log(
+            "JUMLAH TUGAS:",
+            snapshot.size
+        );
+
 
         daftarTugas.innerHTML = "";
 
 
         if (snapshot.empty) {
 
-            daftarTugas.innerHTML =
-                "<p>Belum ada tugas.</p>";
+            daftarTugas.innerHTML = `
+                <p>
+                    Belum ada tugas.
+                </p>
+            `;
 
             return;
-
         }
 
 
@@ -38,6 +54,12 @@ async function tampilkanTugas() {
 
             const tugas =
                 docSnapshot.data();
+
+
+            console.log(
+                "DATA TUGAS:",
+                tugas
+            );
 
 
             const card =
@@ -51,12 +73,13 @@ async function tampilkanTugas() {
             card.innerHTML = `
 
                 <h3>
-                    ${tugas.mapel}
+                    ${tugas.mapel || "Mata Pelajaran"}
                 </h3>
 
                 <a
                     href="${tugas.linkDrive}"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="tugas-link"
                 >
                     Buka Google Drive
@@ -73,12 +96,16 @@ async function tampilkanTugas() {
     } catch (error) {
 
         console.error(
-            "Gagal mengambil tugas:",
+            "ERROR TUGAS:",
             error
         );
 
-        daftarTugas.innerHTML =
-            "<p>Gagal mengambil data tugas.</p>";
+
+        daftarTugas.innerHTML = `
+            <p>
+                Gagal mengambil data tugas.
+            </p>
+        `;
 
     }
 
